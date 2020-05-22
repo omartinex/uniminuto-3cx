@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SetupConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tcxinit>
+    <option>
+      <code>InstallationType</code>
+      <answer>new</answer><!--New install "new", restore Backup  = "restore"-->
+    </option>
+    <option>
+      <code>LicenseKey</code>
+      <answer>U99J-N8UT-RVW6-HIOS</answer>
+    </option>
+    <option>
+      <code>AdminUsername</code>
+      <answer>admin</answer><!--Admin Username-->
+    </option>
+    <option>
+      <code>AdminPassword</code>
+      <answer>jZYOWQl6JY</answer><!--Admin Pasword-->
+    </option>
+    <option>
+      <code>PublicIP</code>
+      <answer>auto</answer><!--"auto" means automatically detect the ip address. Useful in most cases. Otherwise you can put "manual" and fill in Manual Public IP below-->
+    </option>
+    <option>
+      <code>ManualPublicIP</code><!--If public IP = "manual" enter ip here. if "auto" skip-->
+      <answer />
+    </option>
+    <option>
+      <code>StaticOrDynamicIP</code>
+      <answer>static</answer><!--If your public ip is Static (does not change) use "static" otherwise use "dynamic"-->
+    </option>
+    <option>
+      <code>LocalIP</code><!--Here we ask to choose the local ip of the machine. If you have no nat then the public is taken--> 
+      <answer>auto</answer><!--if auto it takes the first ip on the network stack in the list. If you answer with the "manual" option (in multiple nic adapters you will have more interfaces,) then you need to populate the next option ManualLocalIP with the local IP Address you want"-->
+    </option>
+    <option>
+      <code>ManualLocalIP</code><!--Answer only if above question you choose that you want to enter ip manually-->
+	  <answer></answer>
+    </option>
+    <option>
+      <code>NeedFqdn</code>
+      <answer>yes</answer><!-- enter "yes" to get a 3CX FQDN. enter "no" to use your fqdn (custom domains)-->
+    </option>
+    <option>
+      <code>Hostname</code>
+      <answer>uniminuto</answer><!--enter your hostname example contoso - the company name - This option needs to be filled in if NeedFqdn is yes. Skip if need fqdn is NO-->
+    </option>
+	<option>
+	<!--
+		Select Domain Group:
+		(1) Africa
+		(2) Asia
+		(3) Cities
+		(4) Continent
+		(5) Europe
+		(6) Oceania
+		(7) Other
+		(8) South America
+		(9) United States
+		
+		List of available suffixes per Domain Group can be found on:https://activation.3cx.com/apiv2/domains	
+	-->
+	  <code>DomainGroup</code>
+	  <answer>South America</answer>
+	</option>
+    <option>
+      <code>DnsSuffix</code> <!--This option needs to be selected in NeedFqdn is yes. List of available suffixes per Domain Group can be found on:https://activation.3cx.com/apiv2/domains Skip if need fqdn is NO. -->
+      <answer>co</answer>
+    </option>
+    <option>
+      <code>HasLocalDns</code><!--"yes" assumes that you have a manageable local dns example windows dns. "no" assumes that you do not have a dns and therefore will fallback to using IP Addresses --> 
+      <answer>no</answer>
+    </option>
+    <option>
+      <code>HttpsPort</code>
+      <answer>5001</answer>
+    </option>
+    <option>
+      <code>HttpPort</code>
+      <answer>5000</answer>
+    </option>
+	<option>
+      <code>SipPort</code>
+      <answer>5060</answer>
+    </option>
+	<option>
+      <code>TunnelPort</code>
+      <answer>5090</answer>
+    </option>
+    <option>
+      <code>NumberOfExtensions</code> <!--How many digits your extensions should have. Default is 3 Digits. Note that the system reserves 30 numbers for system extension. This can not be changed later. -->
+      <answer>3</answer>
+    </option>
+    <option>
+      <code>AdminEmail</code>
+      <answer>oscar.martinez-r@uniminuto.edu.co</answer> <!-- Email for important system notifications such as 3CX Updates, Service failures, Hacking attempts, Network Errors, Emergencies and other diagnostics.-->
+    </option>
+	<option>
+	<!--
+		Mail Server Configuration. One of values: 3CX, Custom or one of SMTP server names from: https://downloads.3cx.com/downloads/v155/templates/smtp/smtpproviders.html . With free key (3CXPSPBX) you can use only 3CX SMTP provider
+		You can use a Gmail account. More info here: https://www.3cx.com/blog/docs/gmail-mail-server/. Select mail server type:
+		(1) 3CX SMTP server
+		(2) Custom SMTP server
+		(3) Gmail (smtp.gmail.com:587) 
+		(4) Outlook.com (smtp-mail.outlook.com:587) 
+		(5) Office365 (smtp.office365.com:587) 
+	-->
+      <code>MailServerType</code>
+      <answer>3CX</answer>
+    </option>
+    <option>
+      <code>MailServerAddress</code> <!-- Email server details to be used for notifications, voicemails and invites. You can use a Gmail account. More info here: https://www.3cx.com/blog/docs/gmail-mail-server/-->
+      <answer></answer>
+    </option>
+    <option>
+      <code>MailServerReplyTo</code>
+      <answer></answer>
+    </option>
+    <option>
+      <code>MailServerUserName</code> <!-- Can be empty -->
+      <answer></answer>
+    </option>
+    <option>
+      <code>MailServerPassword</code> <!-- Can be empty -->
+      <answer></answer>
+    </option>
+    <option>
+      <code>MailServerEnableSslTls</code>
+      <answer></answer>
+    </option>
+	<option>
+	  <!-- 
+		Continent name one of: 
+		North America
+		South America
+		Europe
+		Asia and the Middle East
+		Africa
+		Australia
+	  -->
+	  <code>Continent</code> 
+	  <answer>South America</answer>
+	</option>
+    <option>
+      <code>Country</code> <!-- Country name from here http://www.3cx.com/wp-content/uploads/2016/11/Time-Zone-Sheet1-1.pdf  -->
+      <answer>Colombia</answer>
+    </option>
+    <option>
+      <code>Timezone</code> <!--get codes from here http://www.3cx.com/wp-content/uploads/2016/11/Time-Zone-Sheet1-1.pdf -->
+      <answer>5</answer>
+    </option>
+    <option>
+      <code>OperatorExtension</code>
+      <answer>000</answer>
+    </option>
+    <option>
+      <code>Oscar</code> <!-- Operator first name. Can be empty. -->
+      <answer></answer>
+    </option>
+    <option>
+      <code>Martinez</code> <!-- Operator last name. Can be empty. -->
+      <answer></answer>
+    </option>
+    <option>
+      <code>OperatorEmail</code>
+      <answer>oscar.martinez-r@uniminuto.edu.co</answer>
+    </option>
+    <option>
+      <code>OperatorVoicemail</code>
+      <answer>999</answer>
+    </option>
+    <option>
+      <code>Promptset</code>
+      <answer>English</answer> <!-- get data from http://downloads.3cx.com/downloads/v150/templates/promptsets/promptsets.xml-->
+    </option>
+    <option>
+      <code>LicenseContactName</code>
+      <answer>Oscar Martinez</answer>
+    </option>
+    <option>
+      <code>LicenseCompanyName</code>
+      <answer>uniminuto</answer>
+    </option>
+    <option>
+      <code>LicenseEmail</code>
+      <answer>oscar.martinez-r@uniminuto.edu.co</answer>
+    </option>
+    <option>
+      <code>LicensePhone</code>
+      <answer>+573211234565</answer>
+    </option>
+    <option>
+      <code>ResellerId</code> <!-- Id of reseller. Can be empty-->
+      <answer></answer>
+    </option>
+  </tcxinit>
+  <HostingConfiguration>
+    <HostingAdminLogin></HostingAdminLogin> <!-- Hosting Administrative Login-->
+    <HostingAdminPassword></HostingAdminPassword> <!-- Hosting Administrative Password-->
+    <HostingAdminEmail></HostingAdminEmail> <!-- Hosting Administrative Email-->
+  </HostingConfiguration>
+  <extensions>
+    <extension>
+      <Number>000</Number> <!-- Extension Number -->
+      <FirstName>Oscar</FirstName>
+      <LastName>Martinez</LastName>
+      <EmailAddress>oscar.martinez-r@uniminuto.edu.co</EmailAddress>
+      <MobileNumber>801123456</MobileNumber>
+      <OutboundCallerId>801123456</OutboundCallerId>
+      <AuthPassword>extensionPassword</AuthPassword> <!-- Authentication password-->
+      <AuthID>000</AuthID> <!-- Authentication ID -->
+      <AllowLanOnly>false</AllowLanOnly> <!-- true false-->
+      <RecordCalls>false</RecordCalls>
+      <TemplateFilename>snom.ph.xml</TemplateFilename> 
+	  <!--http://www.3cx.com/wp-content/uploads/2016/11/Phone-templates-and-Models-Sheet1.pdf -->
+	  <ProvisioningFilename2>Snom 300</ProvisioningFilename2>
+	  <!--http://www.3cx.com/wp-content/uploads/2016/11/Phone-templates-and-Models-Sheet1.pdf -->
+      <MAC>121212ABABAB</MAC>
+      <Codecs> <!-- Codec Priority  - based on phone model - different phones support different codecs-->
+        <codec>G711u</codec>
+        <codec>G711a</codec>
+        <codec>G722</codec>
+	<codec>G729</codec>
+      </Codecs>
+      <Language>English</Language> <!--take languages based on phone model - different phones support different languages-->
+      <ProvisionType>LocalLan</ProvisionType> 
+	  <!-- Available values: LocalLan, RemoteExt, SBC -->								
+    </extension>
+    <extension>
+      <Number>001</Number>
+      <FirstName>Tony</FirstName>
+      <LastName>Smith</LastName>
+      <EmailAddress>email1@example.com</EmailAddress>
+      <MobileNumber>+3579922345</MobileNumber>
+      <OutboundCallerId>1</OutboundCallerId>
+      <AuthPassword>extensionPassword</AuthPassword>
+      <AuthID>001</AuthID>
+      <AllowLanOnly>false</AllowLanOnly>
+      <RecordCalls>false</RecordCalls>
+      <TemplateFilename>snom.ph.xml</TemplateFilename>
+	  <ProvisioningFilename2>Snom 710</ProvisioningFilename2>
+      <MAC>1234567890AB</MAC>
+      <Codecs>
+        <codec>G711u</codec>
+        <codec>G711a</codec>
+        <codec>G722</codec>
+	<codec>G729</codec>
+      </Codecs>
+      <Language>English</Language>
+      <ProvisionType>LocalLan</ProvisionType>
+    </extension>
+  </extensions>
+  <siptrunk>
+    <Name>Voip Trunk 1</Name>
+    <TemplateFilename>GenericSIPTrunk.pv.xml</TemplateFilename> <!-- Template file name from C:\ProgramData\3CX\Instance1\Data\Http\Templates\provider -->
+    <Host>trunk.link.at</Host> <!-- Registrar/Server/Gateway Hostname or IP -->
+    <Port>5050</Port>
+    <ProxyHost>proxy.trunk.link.at</ProxyHost> <!-- Outbound Proxy of sip trunk -->
+    <ProxyPort>5160</ProxyPort> <!--Proxy port-->
+    <SimultaneousCalls>10</SimultaneousCalls> <!-- Number of SIM Calls -->
+    <RequireRegistrationFor>InOutCalls</RequireRegistrationFor> 
+	<!-- Type of Authentication possible values: "Nothing" - No registration required, "IncomingCalls" - Registration is only required for incoming calls, "OutgoingCalls" - Registration is only required for outgoing call, "InOutCalls"	- Registration is required for both incoming and outgoing calls -->
+    <AuthID>456456456</AuthID> <!-- Authentication ID (aka SIP User ID) -->
+    <AuthPassword>Enter Authentication Password</AuthPassword> <!-- Authentication Password -->
+    <Use3WayAuth>true</Use3WayAuth> <!-- Use 3 Way Authentication can be true or false -->
+    <SeparateAuthPassword>3WayPass</SeparateAuthPassword> <!-- Authentication Password for 3 way authentication -->
+    <ExternalNumber>0044870478519100</ExternalNumber> <!-- Main Trunk Number -->
+    <OfficeHoursDestinationType>Extension</OfficeHoursDestinationType> 
+	<!-- Destination for calls during office hours, possible values: "None" - end call, "Extension", "VoiceMail", "External" - destination is external number, "Fax" - destination is Fax number -->																		
+    <OfficeHoursDestination>100</OfficeHoursDestination>  <!-- Destination for calls during office hours (number) -->
+    <OutOfOfficeHoursDestinationType>External</OutOfOfficeHoursDestinationType>
+	<!-- Destination for calls outside office hours, possible values: "None" - end call, "Extension", "VoiceMail", "" - destination is external number, "Fax" - destination is Fax number -->	
+    <OutOfOfficeHoursDestination>96855555</OutOfOfficeHoursDestination> <!-- Destination for calls during out of office hours (number) -->
+    <DIDNumbers>0044870478519101,0044870478519102,0044870478519103,0044870478519104</DIDNumbers> <!--enter DID numbers that the provider gave you here in comma separated form.-->
+    <OutboundCallerID>0044870478519100</OutboundCallerID>
+    <Direction>Both</Direction> 
+	<!-- Allow inbound/outbound calls, possible value: 
+	Both - Both inbound and outbound calls can be made on this line - default option 
+	None - No calls can be made on this line, 
+	Inbound - Only inbound calls can be made on this line, 
+	Outbound - Only outbound calls can be made on this line, -->	
+
+	<!-- PBX Delivers Audio true / false-->
+	<DeliverAudio>true</DeliverAudio> 
+
+	<!--Disallow video calls--> 
+	<DisableVideoCalls>true</DisableVideoCalls>
+
+	<!--Supports Re-Invite-->
+	<SupportReinvite>false</SupportReinvite>
+
+	<!--Supports Replaces-->
+	<SupportReplaces>false</SupportReplaces>
+
+	<!--Put Public IP in SIP VIA Header-->
+	<PublicIpInSipViaHeader>1.2.3.4</PublicIpInSipViaHeader> <!-- Optional. Can be empty or absent -->
+
+	<!-- SRTP-->
+	<EnableSRTP>false</EnableSRTP> 
+
+    <TimeBetweenReg>120</TimeBetweenReg> <!-- Re-Register Timeout -->
+	<!--Select which IP to use in 'Contact' (SIP) and 'Connection'(SDP) fields
+	Available options are 
+	"Default"
+	"Local"
+	"Specified"
+	-->
+	<!--IPcontactsdp 2.2.2.2:5061--> 
+    <IPInRegistrationContact>Default</IPInRegistrationContact>
+    <SpecifiedIPForRegistrationContact></SpecifiedIPForRegistrationContact>
+
+    <Codecs> <!-- Codec Priority adjust depending on what the sip trunk supports-->
+      <codec>G729</codec>
+	  <codec>G.711 A-law</codec>
+	  <codec>G.711 U-law</codec>
+      <codec>GSM-FR</codec>
+	  <codec>iLBC</codec>
+	  <codec>Speex</codec>
+	  <codec>G722</codec>
+    </Codecs>
+		<InboundRules> <!--creation of inbound rules-->
+		<InboundRule>
+			<Name>ContosoIN</Name>
+			<DID>0044870478519101</DID> <!--select one of the DID's you declared in <DIDNumbers>-->
+			<OfficeHoursDestinationType>Extension</OfficeHoursDestinationType>
+			<OfficeHoursDestination>001</OfficeHoursDestination> <!--select an extension that exists or that is already declared in this file-->
+			<OutOfOfficeHoursDestinationType>VoiceMail</OutOfOfficeHoursDestinationType>
+			<OutOfOfficeHoursDestination>001</OutOfOfficeHoursDestination>
+			<SpecificHours> <!-- OPTIONAL. If not specified it means use Global Office Hours -->
+				<HoursRange>
+					<StartTime>08:00</StartTime><!--Start time in format 00:00-->
+					<EndTime>16:00</EndTime> <!--End time in format 00:00-->
+					<DayOfWeek>Monday</DayOfWeek> <!-- Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday-->
+				</HoursRange>
+				<HoursRange>
+					<StartTime>17:00</StartTime> <!--split time - do not overlap times-->
+					<EndTime>22:00</EndTime> <!--split time - do not overlap times-->
+					<DayOfWeek>Monday</DayOfWeek>
+				</HoursRange>
+			</SpecificHours>
+		</InboundRule>
+	</InboundRules>
+  </siptrunk>
+  <siptrunk>
+    <Name>Voip Trunk 2</Name>
+    <TemplateFilename>GenericSIPTrunk.pv.xml</TemplateFilename> <!-- Template file name from C:\ProgramData\3CX\Instance1\Data\Http\Templates\provider -->
+    <Host>trunk.link.at</Host> <!-- Registrar/Server/Gateway Hostname or IP -->
+    <Port>5050</Port>
+    <ProxyHost>proxy.trunk.link.at</ProxyHost> <!-- Outbound Proxy of sip trunk -->
+    <ProxyPort>5160</ProxyPort> <!--Proxy port-->
+    <SimultaneousCalls>10</SimultaneousCalls> <!-- Number of SIM Calls -->
+    <RequireRegistrationFor>InOutCalls</RequireRegistrationFor> 
+	<!-- Type of Authentication possible values: "Nothing" - No registration required, "IncomingCalls" - Registration is only required for incoming calls, "OutgoingCalls" - Registration is only required for outgoing call, "InOutCalls"	- Registration is required for both incoming and outgoing calls -->
+    <AuthID>456456456</AuthID> <!-- Authentication ID (aka SIP User ID) -->
+    <AuthPassword>Enter Authentication Password</AuthPassword> <!-- Authentication Password -->
+    <Use3WayAuth>true</Use3WayAuth> <!-- Use 3 Way Authentication can be true or false -->
+    <SeparateAuthPassword>3WayPass</SeparateAuthPassword> <!-- Authentication Password for 3 way authentication -->
+    <ExternalNumber>0044870478519100</ExternalNumber> <!-- Main Trunk Number -->
+    <OfficeHoursDestinationType>Extension</OfficeHoursDestinationType> 
+	<!-- Destination for calls during office hours, possible values: "None" - end call, "Extension", "VoiceMail", "External" - destination is external number, "Fax" - destination is Fax number -->																		
+    <OfficeHoursDestination>100</OfficeHoursDestination>  <!-- Destination for calls during office hours (number) -->
+    <OutOfOfficeHoursDestinationType>External</OutOfOfficeHoursDestinationType>
+	<!-- Destination for calls outside office hours, possible values: "None" - end call, "Extension", "VoiceMail", "" - destination is external number, "Fax" - destination is Fax number -->	
+    <OutOfOfficeHoursDestination>96855555</OutOfOfficeHoursDestination> <!-- Destination for calls during out of office hours (number) -->
+    <DIDNumbers>0044870478519101,0044870478519102,0044870478519103,0044870478519104</DIDNumbers> <!--enter DID numbers that the provider gave you here in comma separated form.-->
+    <OutboundCallerID>0044870478519100</OutboundCallerID>
+    <Direction>Both</Direction> 
+	<!-- Allow inbound/outbound calls, possible value: 
+	Both - Both inbound and outbound calls can be made on this line - default option 
+	None - No calls can be made on this line, 
+	Inbound - Only inbound calls can be made on this line, 
+	Outbound - Only outbound calls can be made on this line, -->	
+
+	<!-- PBX Delivers Audio true / false-->
+	<DeliverAudio>true</DeliverAudio> 
+
+	<!--Disallow video calls--> 
+	<DisableVideoCalls>true</DisableVideoCalls>
+
+	<!--Supports Re-Invite-->
+	<SupportReinvite>false</SupportReinvite>
+
+	<!--Supports Replaces-->
+	<SupportReplaces>false</SupportReplaces>
+
+	<!--Put Public IP in SIP VIA Header-->
+	<PublicIpInSipViaHeader>1.2.3.4</PublicIpInSipViaHeader> <!-- Optional. Can be empty or absent -->
+
+	<!-- SRTP-->
+	<EnableSRTP>false</EnableSRTP> 
+
+    <TimeBetweenReg>120</TimeBetweenReg> <!-- Re-Register Timeout -->
+	<!--Select which IP to use in 'Contact' (SIP) and 'Connection'(SDP) fields
+	Available options are 
+	"Default"
+	"Local"
+	"Specified"
+	-->
+	<!--IPcontactsdp 2.2.2.2:5061--> 
+    <IPInRegistrationContact>Default</IPInRegistrationContact>
+    <SpecifiedIPForRegistrationContact></SpecifiedIPForRegistrationContact>
+
+    <Codecs> <!-- Codec Priority adjust depending on what the sip trunk supports-->
+      <codec>G729</codec>
+	  <codec>G.711 A-law</codec>
+	  <codec>G.711 U-law</codec>
+      <codec>GSM-FR</codec>
+	  <codec>iLBC</codec>
+	  <codec>Speex</codec>
+	  <codec>G722</codec>
+    </Codecs>
+		<InboundRules> <!--creation of inbound rules-->
+		<InboundRule>
+			<Name>ContosoIN</Name>
+			<DID>0044870478519101</DID> <!--select one of the DID's you declared in <DIDNumbers>-->
+			<OfficeHoursDestinationType>Extension</OfficeHoursDestinationType>
+			<OfficeHoursDestination>001</OfficeHoursDestination> <!--select an extension that exists or that is already declared in this file-->
+			<OutOfOfficeHoursDestinationType>VoiceMail</OutOfOfficeHoursDestinationType>
+			<OutOfOfficeHoursDestination>001</OutOfOfficeHoursDestination>
+			<SpecificHours> <!-- OPTIONAL. If not specified it means use Global Office Hours -->
+				<HoursRange>
+					<StartTime>08:00</StartTime><!--Start time in format 00:00-->
+					<EndTime>16:00</EndTime> <!--End time in format 00:00-->
+					<DayOfWeek>Monday</DayOfWeek> <!-- Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday-->
+				</HoursRange>
+				<HoursRange>
+					<StartTime>17:00</StartTime> <!--split time - do not overlap times-->
+					<EndTime>22:00</EndTime> <!--split time - do not overlap times-->
+					<DayOfWeek>Monday</DayOfWeek>
+				</HoursRange>
+			</SpecificHours>
+		</InboundRule>
+	</InboundRules>
+  </siptrunk>
+   <!-- All following rules will be added to the end of list of existed (if any) rules on target PBX -->
+  <OutboundRules>
+    <OutboundRule>
+      <Name>outbound rule name</Name>
+	  <Prefix>111</Prefix>
+	  <DNRanges> <!--Calls from extensions example 000,100-105-->
+        <DNRange>
+          <To>000</To>
+          <From>000</From>
+        </DNRange>
+        <DNRange>
+          <To>105</To>
+          <From>100</From>
+        </DNRange>
+      </DNRanges>
+	  <NumberLengthRanges>9,10,11</NumberLengthRanges> <!-- can be comma-separated string of lengths as well: 9,10,11 -->
+      <DNGroups> <!--add the group or groups here-->
+        <Group>Sales</Group>
+        <Group>Ceo</Group>
+      </DNGroups>
+      <OutboundRoutes>
+        <OutboundRoute>
+          <Gateway>ContosoIN</Gateway>
+		  <StripDigits>0</StripDigits>
+		  <Prepend>807</Prepend>
+        </OutboundRoute>
+        <OutboundRoute>
+          <Gateway>TRUNKA</Gateway>
+          <StripDigits>1</StripDigits>
+		  <Prepend>801</Prepend>
+        </OutboundRoute>
+      </OutboundRoutes>
+    </OutboundRule>
+  </OutboundRules> 
+</SetupConfig>
