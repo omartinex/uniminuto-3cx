@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "debian/stretch64"
   config.vm.define "3cx"
 
   # Disable automatic box update checking. If you disable this, then
@@ -23,19 +23,20 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 5015, host: 5015, id: '3cxman'
-  config.vm.network "forwarded_port", guest: 5000, host: 5000, id: '3cxman0'
-  config.vm.network "forwarded_port", guest: 5001, host: 5001, id: '3cxman1'
-  config.vm.network "forwarded_port", guest: 5060, host: 5060, id: '3cxman5', protocol: "tcp"
-  config.vm.network "forwarded_port", guest: 5060, host: 5060, id: '3cxman4', protocol: "udp"
-  config.vm.network "forwarded_port", guest: 5090, host: 5090, id: '3cxman6', protocol: "tcp"
-  config.vm.network "forwarded_port", guest: 5090, host: 5090, id: '3cxman7', protocol: "udp"
-  config.vm.network "forwarded_port", guest: 6060, host: 6060, id: '3cxman3', protocol: "tcp"
-  config.vm.network "forwarded_port", guest: 6060, host: 6060, id: '3cxman2', protocol: "udp"
 
-  for i in 9000..9255
-    config.vm.network "forwarded_port", guest: i, host: i, protocol: "udp"
-  end
+  #config.vm.network "forwarded_port", guest: 5015, host: 5015, id: '3cxman'
+  #config.vm.network "forwarded_port", guest: 5000, host: 5000, id: '3cxman0'
+  #config.vm.network "forwarded_port", guest: 5001, host: 5001, id: '3cxman1'
+  #config.vm.network "forwarded_port", guest: 5060, host: 5060, id: '3cxman5', protocol: "tcp"
+  #config.vm.network "forwarded_port", guest: 5060, host: 5060, id: '3cxman4', protocol: "udp"
+  #config.vm.network "forwarded_port", guest: 5090, host: 5090, id: '3cxman6', protocol: "tcp"
+  #config.vm.network "forwarded_port", guest: 5090, host: 5090, id: '3cxman7', protocol: "udp"
+  #config.vm.network "forwarded_port", guest: 6060, host: 6060, id: '3cxman3', protocol: "tcp"
+  #config.vm.network "forwarded_port", guest: 6060, host: 6060, id: '3cxman2', protocol: "udp"
+
+  #for i in 9000..9255
+  #  config.vm.network "forwarded_port", guest: i, host: i, protocol: "udp"
+  #end
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.

@@ -43,7 +43,7 @@
     </option>
     <option>
       <code>Hostname</code>
-      <answer>uniminuto</answer><!--enter your hostname example contoso - the company name - This option needs to be filled in if NeedFqdn is yes. Skip if need fqdn is NO-->
+      <answer>voip-uniminuto</answer><!--enter your hostname example contoso - the company name - This option needs to be filled in if NeedFqdn is yes. Skip if need fqdn is NO-->
     </option>
 	<option>
 	<!--
@@ -154,12 +154,12 @@
       <answer>000</answer>
     </option>
     <option>
-      <code>Oscar</code> <!-- Operator first name. Can be empty. -->
-      <answer></answer>
+      <code>OperatorFirstName</code> <!-- Operator first name. Can be empty. -->
+      <answer>Oscar</answer>
     </option>
     <option>
-      <code>Martinez</code> <!-- Operator last name. Can be empty. -->
-      <answer></answer>
+      <code>OperatorLastName</code> <!-- Operator last name. Can be empty. -->
+      <answer>Martinez</answer>
     </option>
     <option>
       <code>OperatorEmail</code>
