@@ -227,14 +227,14 @@
 	  <!-- Available values: LocalLan, RemoteExt, SBC -->								
     </extension>
     <extension>
-      <Number>001</Number>
+      <Number>100</Number>
       <FirstName>Tony</FirstName>
-      <LastName>Smith</LastName>
-      <EmailAddress>email1@example.com</EmailAddress>
+      <LastName>Stark</LastName>
+      <EmailAddress>tony.stark@avengers.com</EmailAddress>
       <MobileNumber>+3579922345</MobileNumber>
       <OutboundCallerId>1</OutboundCallerId>
       <AuthPassword>extensionPassword</AuthPassword>
-      <AuthID>001</AuthID>
+      <AuthID>100</AuthID>
       <AllowLanOnly>false</AllowLanOnly>
       <RecordCalls>false</RecordCalls>
       <TemplateFilename>snom.ph.xml</TemplateFilename>
@@ -244,7 +244,53 @@
         <codec>G711u</codec>
         <codec>G711a</codec>
         <codec>G722</codec>
-	<codec>G729</codec>
+	      <codec>G729</codec>
+      </Codecs>
+      <Language>English</Language>
+      <ProvisionType>LocalLan</ProvisionType>
+    </extension>
+    <extension>
+      <Number>101</Number>
+      <FirstName>Elliot</FirstName>
+      <LastName>Allderson</LastName>
+      <EmailAddress>elliot@ecorp.com</EmailAddress>
+      <MobileNumber>+3579922345</MobileNumber>
+      <OutboundCallerId>1</OutboundCallerId>
+      <AuthPassword>extensionPassword</AuthPassword>
+      <AuthID>101</AuthID>
+      <AllowLanOnly>false</AllowLanOnly>
+      <RecordCalls>false</RecordCalls>
+      <TemplateFilename>snom.ph.xml</TemplateFilename>
+	    <ProvisioningFilename2>Snom 710</ProvisioningFilename2>
+      <MAC>1234567890AB</MAC>
+      <Codecs>
+        <codec>G711u</codec>
+        <codec>G711a</codec>
+        <codec>G722</codec>
+	      <codec>G729</codec>
+      </Codecs>
+      <Language>English</Language>
+      <ProvisionType>LocalLan</ProvisionType>
+    </extension>
+    <extension>
+      <Number>102</Number>
+      <FirstName>Elon</FirstName>
+      <LastName>Musk</LastName>
+      <EmailAddress>elon@spacex.com</EmailAddress>
+      <MobileNumber>+3579922345</MobileNumber>
+      <OutboundCallerId>1</OutboundCallerId>
+      <AuthPassword>extensionPassword</AuthPassword>
+      <AuthID>102</AuthID>
+      <AllowLanOnly>false</AllowLanOnly>
+      <RecordCalls>false</RecordCalls>
+      <TemplateFilename>snom.ph.xml</TemplateFilename>
+	    <ProvisioningFilename2>Snom 710</ProvisioningFilename2>
+      <MAC>1234567890AB</MAC>
+      <Codecs>
+        <codec>G711u</codec>
+        <codec>G711a</codec>
+        <codec>G722</codec>
+	      <codec>G729</codec>
       </Codecs>
       <Language>English</Language>
       <ProvisionType>LocalLan</ProvisionType>
