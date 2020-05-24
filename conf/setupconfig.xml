@@ -43,7 +43,7 @@
     </option>
     <option>
       <code>Hostname</code>
-      <answer>voip-uniminuto</answer><!--enter your hostname example contoso - the company name - This option needs to be filled in if NeedFqdn is yes. Skip if need fqdn is NO-->
+      <answer>uniminuto-voip</answer><!--enter your hostname example contoso - the company name - This option needs to be filled in if NeedFqdn is yes. Skip if need fqdn is NO-->
     </option>
 	<option>
 	<!--
